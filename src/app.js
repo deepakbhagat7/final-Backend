@@ -20,4 +20,15 @@ app.use(express.urlencoded({extended:true, limit :"16kb"}))
 app.use(express.static("public"))
 
 app.use(cookieParser())
+
+
+// routes import
+import userRouter from './routes/user.routes.js' 
+
+// routes declaration -- it will take you to user routes.js where you want to tell what should this do
+app.use("/api/v1/users", userRouter)
+
+// app.use("/users", userRouter) not a good practice
+
+
 export {app}
