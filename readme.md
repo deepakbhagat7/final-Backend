@@ -21,13 +21,14 @@ JWT is a bearer token whosever request the key from jwt it gives to them
 Acess token short lived
 refresh token long lived
 
-why access toekn?
+### why access toekn?
 Till you have access token you cn use the resource for example suppose you are login you can upload file till the time ypu are logged in.
 
-Refres token
+### Refresh token
 refresh token is same in database and clinet side...
 suppose user logged out un expectidely..then with the help of refresh token user didn't have to login again.  refresh token can be used for login
 
+### working of refresh and access token
 Access Token - Short lived, not stored in db
 Refresh Token - Long lived, stored in db
 When access token expires, the frontend sends the refresh token to the backend to validate user (login), once again.
